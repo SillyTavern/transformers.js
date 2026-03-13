@@ -1,24 +1,19 @@
-import { apis } from '../env.js';
-
 /**
  * The list of devices supported by Transformers.js
  */
 export const DEVICE_TYPES = Object.freeze({
     auto: 'auto', // Auto-detect based on device and environment
     gpu: 'gpu', // Auto-detect GPU
-    cpu: 'cpu', // CPU
+    cpu: 'cpu', // CPU (via WebAssembly)
     wasm: 'wasm', // WebAssembly
     webgpu: 'webgpu', // WebGPU
-    cuda: 'cuda', // CUDA
-    dml: 'dml', // DirectML
-    coreml: 'coreml', // CoreML
 
     webnn: 'webnn', // WebNN (default)
     'webnn-npu': 'webnn-npu', // WebNN NPU
     'webnn-gpu': 'webnn-gpu', // WebNN GPU
     'webnn-cpu': 'webnn-cpu', // WebNN CPU
 });
-const DEFAULT_DEVICE = apis.IS_NODE_ENV ? 'cpu' : 'wasm';
+const DEFAULT_DEVICE = 'wasm';
 
 /**
  * @typedef {keyof typeof DEVICE_TYPES} DeviceType

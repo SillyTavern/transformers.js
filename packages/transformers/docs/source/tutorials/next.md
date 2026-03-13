@@ -60,7 +60,6 @@ const nextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       sharp$: false,
-      "onnxruntime-node$": false,
     };
     return config;
   },
@@ -274,7 +273,7 @@ const nextConfig = {
 
   // Indicate that these packages should not be bundled by webpack
   experimental: {
-    serverComponentsExternalPackages: ["sharp", "onnxruntime-node"],
+    serverComponentsExternalPackages: ["sharp", "onnxruntime-web"],
   },
 };
 
