@@ -59,7 +59,7 @@
     "@huggingface/tokenizers": "^0.1.2",
     "onnxruntime-node": "1.24.3",
     "onnxruntime-web": "1.25.0-dev.20260307-d626b568e0",
-    "sharp": "^0.34.5"
+    "jimp": "1.6.0"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
