@@ -34,7 +34,8 @@ if (apis.IS_WEB_ENV) {
     // Running in Node.js, electron, or other non-browser environment
 
     loadImageFunction = async (/**@type {InstanceType<typeof Jimp>}*/ img) => {
-        // Jimp always uses RGBA (4 channels)
+        // Jimp always uses RGBA (4 channels); callers handle conversion to
+        // the original channel count when needed (e.g., via .convert()).
         const data = new Uint8ClampedArray(img.bitmap.data);
         return new RawImage(data, img.bitmap.width, img.bitmap.height, 4);
     };
@@ -416,6 +417,7 @@ export class RawImage {
                 }
 
                 case 'lanczos':
+                    // Jimp does not support Lanczos; use bicubic as the closest alternative
                     img = img.resize({ w: width, h: height, mode: ResizeStrategy.BICUBIC });
                     break;
 
