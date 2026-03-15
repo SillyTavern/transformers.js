@@ -89,8 +89,6 @@ export async function loadWasmFactory(libURL) {
         // would enter the Node.js branch and try to use Node.js APIs (worker_threads, fs, etc.) that aren't used in the bundled web version.
         // Only needed for the asyncify (single-threaded) variant loaded via blob URL. The module-level pthread auto-start code is unreachable since asyncify never spawns workers.
         // See https://github.com/huggingface/transformers.js/pull/1546/ for more information.
-        //
-        // NOTE: This does not affect default usage via Deno (i.e., imported via npm: prefix), since we'll be using onnxruntime-node (Native) instead of onnxruntime-web (WASM).
         code = code.replaceAll('globalThis.process?.versions?.node', 'false');
         const blob = new Blob([code], { type: 'text/javascript' });
         return URL.createObjectURL(blob);

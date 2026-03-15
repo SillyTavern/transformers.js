@@ -1,11 +1,6 @@
 /**
- * @file Handler file for choosing the correct version of ONNX Runtime, based on the environment.
- * Ideally, we could import the `onnxruntime-web` and `onnxruntime-node` packages only when needed,
- * but dynamic imports don't seem to work with the current webpack version and/or configuration.
- * This is possibly due to the experimental nature of top-level await statements.
- * So, we just import both packages, and use the appropriate one based on the environment:
- *   - When running in node, we use `onnxruntime-node`.
- *   - When running in the browser, we use `onnxruntime-web` (`onnxruntime-node` is not bundled).
+ * @file Handler file for the ONNX Runtime Web backend.
+ * This module always uses the `onnxruntime-web` package (WASM runtime) for all environments.
  *
  * This module is not directly exported, but can be accessed through the environment variables:
  * ```javascript
@@ -18,9 +13,6 @@
 
 import { env, apis, LogLevel } from '../env.js';
 
-// NOTE: Import order matters here. We need to import `onnxruntime-node` before `onnxruntime-web`.
-// In either case, we select the default export if it exists, otherwise we use the named export.
-import * as ONNX_NODE from 'onnxruntime-node';
 import * as ONNX_WEB from 'onnxruntime-web/webgpu';
 import { loadWasmBinary, loadWasmFactory } from './utils/cacheWasm.js';
 import { isBlobURL, toAbsoluteURL } from '../utils/hub/utils.js';
@@ -35,12 +27,9 @@ export { Tensor } from 'onnxruntime-common';
 const DEVICE_TO_EXECUTION_PROVIDER_MAPPING = Object.freeze({
     auto: null, // Auto-detect based on device and environment
     gpu: null, // Auto-detect GPU
-    cpu: 'cpu', // CPU
+    cpu: 'wasm', // CPU (via WebAssembly)
     wasm: 'wasm', // WebAssembly
     webgpu: 'webgpu', // WebGPU
-    cuda: 'cuda', // CUDA
-    dml: 'dml', // DirectML
-    coreml: 'coreml', // CoreML
 
     webnn: { name: 'webnn', deviceType: 'cpu' }, // WebNN (default)
     'webnn-npu': { name: 'webnn', deviceType: 'npu' }, // WebNN NPU
@@ -105,35 +94,6 @@ const ORT_SYMBOL = Symbol.for('onnxruntime');
 if (ORT_SYMBOL in globalThis) {
     // If the JS runtime exposes their own ONNX runtime, use it
     ONNX = globalThis[ORT_SYMBOL];
-} else if (apis.IS_NODE_ENV) {
-    ONNX = ONNX_NODE;
-
-    // Updated as of ONNX Runtime 1.23.0-dev.20250612-70f14d7670
-    // The following table lists the supported versions of ONNX Runtime Node.js binding provided with pre-built binaries.
-    // | EPs/Platforms         | Windows x64        | Windows arm64      | Linux x64          | Linux arm64        | MacOS x64          | MacOS arm64        |
-    // | --------------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-    // | CPU                   | ✔️                  | ✔️                  | ✔️                  | ✔️                  | ✔️                  | ✔️                  |
-    // | WebGPU (experimental) | ✔️                  | ✔️                  | ✔️                  | ❌                  | ✔️                  | ✔️                  |
-    // | DirectML              | ✔️                  | ✔️                  | ❌                  | ❌                  | ❌                  | ❌                  |
-    // | CUDA                  | ❌                  | ❌                  | ✔️ (CUDA v12)       | ❌                  | ❌                  | ❌                  |
-    // | CoreML                | ❌                  | ❌                  | ❌                  | ❌                  | ✔️                  | ✔️                  |
-    switch (process.platform) {
-        case 'win32': // Windows x64 and Windows arm64
-            supportedDevices.push('dml');
-            break;
-        case 'linux': // Linux x64 and Linux arm64
-            if (process.arch === 'x64') {
-                supportedDevices.push('cuda');
-            }
-            break;
-        case 'darwin': // MacOS x64 and MacOS arm64
-            supportedDevices.push('coreml');
-            break;
-    }
-
-    supportedDevices.push('webgpu');
-    supportedDevices.push('cpu');
-    defaultDevices = ['cpu'];
 } else {
     ONNX = ONNX_WEB;
 
@@ -147,6 +107,7 @@ if (ORT_SYMBOL in globalThis) {
     }
 
     supportedDevices.push('wasm');
+    supportedDevices.push('cpu');
     defaultDevices = ['wasm'];
 }
 
@@ -167,7 +128,7 @@ export function deviceToExecutionProviders(device = null) {
         case 'auto':
             return supportedDevices;
         case 'gpu':
-            return supportedDevices.filter((x) => ['webgpu', 'cuda', 'dml', 'webnn-gpu'].includes(x));
+            return supportedDevices.filter((x) => ['webgpu', 'webnn-gpu'].includes(x));
     }
 
     if (supportedDevices.includes(device)) {
@@ -292,7 +253,7 @@ export async function createInferenceSession(buffer_or_path, session_options, se
             logSeverityLevel,
             ...session_options,
         });
-    const session = await (apis.IS_WEB_ENV ? (webInitChain = webInitChain.then(load)) : load());
+    const session = await (webInitChain = webInitChain.then(load));
     session.config = session_config;
     return session;
 }
@@ -312,7 +273,7 @@ let webInferenceChain = Promise.resolve();
  */
 export async function runInferenceSession(session, ortFeed) {
     const run = () => session.run(ortFeed);
-    return apis.IS_WEB_ENV ? (webInferenceChain = webInferenceChain.then(run)) : run();
+    return webInferenceChain = webInferenceChain.then(run);
 }
 
 /**

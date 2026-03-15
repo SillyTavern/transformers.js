@@ -37,7 +37,6 @@ export const ignoreModulesPlugin = (modules = []) => ({
         case "node:fs":
         case "node:path":
         case "node:url":
-        case "onnxruntime-node":
         default:
           return {
             contents: `export default {};`,

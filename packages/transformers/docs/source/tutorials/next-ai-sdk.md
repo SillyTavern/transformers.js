@@ -42,7 +42,6 @@ const nextConfig: NextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       jimp$: false,
-      "onnxruntime-node$": false,
     };
     return config;
   },
