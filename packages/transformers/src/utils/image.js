@@ -412,12 +412,14 @@ export class RawImage {
                         bilinear: ResizeStrategy.BILINEAR,
                         bicubic: ResizeStrategy.BICUBIC,
                     };
+                    // @ts-ignore - Jimp's generic return type is not assignable back to its own instance type
                     img = img.resize({ w: width, h: height, mode: modeMap[resampleMethod] });
                     break;
                 }
 
                 case 'lanczos':
                     // Jimp does not support Lanczos; use bicubic as the closest alternative
+                    // @ts-ignore - Jimp's generic return type is not assignable back to its own instance type
                     img = img.resize({ w: width, h: height, mode: ResizeStrategy.BICUBIC });
                     break;
 
@@ -579,6 +581,7 @@ export class RawImage {
 
             if (width_offset >= 0 && height_offset >= 0) {
                 // Cropped image lies entirely within the original image
+                // @ts-ignore - Jimp's generic return type is not assignable back to its own instance type
                 img = img.crop({
                     x: Math.floor(width_offset),
                     y: Math.floor(height_offset),
@@ -619,6 +622,7 @@ export class RawImage {
                 const extHeight = this.height + y_padding[0] + y_padding[1];
                 const padded = new Jimp({ width: extWidth, height: extHeight, color: 0x00000000 });
                 padded.composite(img, x_padding[0], y_padding[0]);
+                // @ts-ignore - Jimp's generic return type is not assignable back to its own instance type
                 img = padded.crop({
                     x: x_extract,
                     y: y_extract,
@@ -770,6 +774,7 @@ export class RawImage {
             return saveBlob(path, blob);
         } else if (apis.IS_FS_AVAILABLE) {
             const img = this.toJimp();
+            // @ts-ignore - path is a valid string with extension, but TS expects template literal type
             await img.write(path);
         } else {
             throw new Error('Unable to save the image because filesystem is disabled in this environment.');
