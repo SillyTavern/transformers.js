@@ -4,6 +4,10 @@ on:
   release:
     types: [published]
 
+permissions:
+  id-token: write
+  contents: read
+
 env:
   ONNXRUNTIME_NODE_INSTALL: skip
 
@@ -24,5 +28,3 @@ jobs:
       - run: pnpm build
       - name: Publish to npm
         run: pnpm --filter @huggingface/transformers publish --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

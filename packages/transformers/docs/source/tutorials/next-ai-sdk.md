@@ -41,7 +41,7 @@ const nextConfig: NextConfig = {
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      sharp$: false,
+      jimp$: false,
     };
     return config;
   },

@@ -37,10 +37,13 @@ export const ignoreModulesPlugin = (modules = []) => ({
         case "node:fs":
         case "node:path":
         case "node:url":
-        case "sharp":
         default:
           return {
             contents: `export default {};`,
+          };
+        case "jimp":
+          return {
+            contents: `export const Jimp = undefined; export const ResizeStrategy = {}; export default {};`,
           };
       }
     });
