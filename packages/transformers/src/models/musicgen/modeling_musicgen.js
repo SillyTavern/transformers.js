@@ -21,7 +21,7 @@ export class MusicgenForCausalLM extends MusicgenPreTrainedModel {}
  *
  * **Example:** Generate music from text with `Xenova/musicgen-small`.
  * ```javascript
- * import { AutoTokenizer, MusicgenForConditionalGeneration, RawAudio } from 'sillytavern-transformers';
+ * import { AutoTokenizer, MusicgenForConditionalGeneration, RawAudio } from '@huggingface/transformers';
  *
  * // Load tokenizer and model
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/musicgen-small');

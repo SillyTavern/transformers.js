@@ -39,7 +39,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Classify an image.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const classifier = await pipeline('image-classification', 'Xenova/vit-base-patch16-224');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/tiger.jpg';
@@ -51,7 +51,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Classify an image and return top `n` classes.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const classifier = await pipeline('image-classification', 'Xenova/vit-base-patch16-224');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/tiger.jpg';
@@ -65,7 +65,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Classify an image and return all classes.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const classifier = await pipeline('image-classification', 'Xenova/vit-base-patch16-224');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/tiger.jpg';

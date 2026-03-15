@@ -8,7 +8,7 @@ export class DonutSwinPreTrainedModel extends PreTrainedModel {}
  * **Example:** Step-by-step Document Parsing.
  *
  * ```javascript
- * import { AutoProcessor, AutoTokenizer, AutoModelForVision2Seq, RawImage } from 'sillytavern-transformers';
+ * import { AutoProcessor, AutoTokenizer, AutoModelForVision2Seq, RawImage } from '@huggingface/transformers';
  *
  * // Choose model to use
  * const model_id = 'Xenova/donut-base-finetuned-cord-v2';
@@ -43,7 +43,7 @@ export class DonutSwinPreTrainedModel extends PreTrainedModel {}
  * **Example:** Step-by-step Document Visual Question Answering (DocVQA)
  *
  * ```javascript
- * import { AutoProcessor, AutoTokenizer, AutoModelForVision2Seq, RawImage } from 'sillytavern-transformers';
+ * import { AutoProcessor, AutoTokenizer, AutoModelForVision2Seq, RawImage } from '@huggingface/transformers';
  *
  * // Choose model to use
  * const model_id = 'Xenova/donut-base-finetuned-docvqa';

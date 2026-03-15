@@ -60,7 +60,7 @@ import { logger } from '../utils/logger.js';
  *
  * **Example:** Transcribe English.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const transcriber = await pipeline('automatic-speech-recognition', 'Xenova/whisper-tiny.en');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/jfk.wav';
@@ -70,7 +70,7 @@ import { logger } from '../utils/logger.js';
  *
  * **Example:** Transcribe English w/ timestamps.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const transcriber = await pipeline('automatic-speech-recognition', 'Xenova/whisper-tiny.en');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/jfk.wav';
@@ -86,7 +86,7 @@ import { logger } from '../utils/logger.js';
  *
  * **Example:** Transcribe English w/ word-level timestamps.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const transcriber = await pipeline('automatic-speech-recognition', 'Xenova/whisper-tiny.en');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/jfk.wav';
@@ -107,7 +107,7 @@ import { logger } from '../utils/logger.js';
  *
  * **Example:** Transcribe French.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const transcriber = await pipeline('automatic-speech-recognition', 'Xenova/whisper-small');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/french-audio.mp3';
@@ -117,7 +117,7 @@ import { logger } from '../utils/logger.js';
  *
  * **Example:** Translate French to English.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const transcriber = await pipeline('automatic-speech-recognition', 'Xenova/whisper-small');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/french-audio.mp3';
@@ -127,7 +127,7 @@ import { logger } from '../utils/logger.js';
  *
  * **Example:** Transcribe/translate audio longer than 30 seconds.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const transcriber = await pipeline('automatic-speech-recognition', 'Xenova/whisper-tiny.en');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/ted_60.wav';

@@ -18,7 +18,7 @@ The list of available quantizations depends on the model, but some common ones a
 **Example:** Run Qwen2.5-0.5B-Instruct in 4-bit quantization ([demo](https://v2.scrimba.com/s0dlcpv0ci))
 
 ```js
-import { pipeline } from "sillytavern-transformers";
+import { pipeline } from "@huggingface/transformers";
 
 // Create a text generation pipeline
 const generator = await pipeline(
@@ -45,7 +45,7 @@ Some encoder-decoder models, like Whisper or Florence-2, are extremely sensitive
 **Example:** Run Florence-2 on WebGPU ([demo](https://v2.scrimba.com/s0pdm485fo))
 
 ```js
-import { Florence2ForConditionalGeneration } from "sillytavern-transformers";
+import { Florence2ForConditionalGeneration } from "@huggingface/transformers";
 
 const model = await Florence2ForConditionalGeneration.from_pretrained(
   "onnx-community/Florence-2-base-ft",
@@ -76,7 +76,7 @@ import {
   AutoProcessor,
   AutoTokenizer,
   RawImage,
-} from "sillytavern-transformers";
+} from "@huggingface/transformers";
 
 // Load model, processor, and tokenizer
 const model_id = "onnx-community/Florence-2-base-ft";

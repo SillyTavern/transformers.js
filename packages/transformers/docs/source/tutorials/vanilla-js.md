@@ -109,7 +109,7 @@ Moving into `index.js`, let's import Transformers.js by adding the following lin
 import {
   pipeline,
   env,
-} from "https://cdn.jsdelivr.net/npm/sillytavern-transformers";
+} from "https://cdn.jsdelivr.net/npm/@huggingface/transformers";
 ```
 
 Since we will be downloading the model from the Hugging Face Hub, we can skip the local model check by setting:

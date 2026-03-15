@@ -52,7 +52,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Run question answering with `Xenova/distilbert-base-uncased-distilled-squad`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const answerer = await pipeline('question-answering', 'Xenova/distilbert-base-uncased-distilled-squad');
  * const question = 'Who was Jim Henson?';

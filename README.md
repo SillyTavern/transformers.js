@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/sillytavern-transformers"><img alt="NPM" src="https://img.shields.io/npm/v/sillytavern-transformers"></a>
-    <a href="https://www.npmjs.com/package/sillytavern-transformers"><img alt="NPM Downloads" src="https://img.shields.io/npm/dw/sillytavern-transformers"></a>
-    <a href="https://www.jsdelivr.com/package/npm/sillytavern-transformers"><img alt="jsDelivr Hits" src="https://img.shields.io/jsdelivr/npm/hw/sillytavern-transformers"></a>
+    <a href="https://www.npmjs.com/package/@huggingface/transformers"><img alt="NPM" src="https://img.shields.io/npm/v/@huggingface/transformers"></a>
+    <a href="https://www.npmjs.com/package/@huggingface/transformers"><img alt="NPM Downloads" src="https://img.shields.io/npm/dw/@huggingface/transformers"></a>
+    <a href="https://www.jsdelivr.com/package/npm/@huggingface/transformers"><img alt="jsDelivr Hits" src="https://img.shields.io/jsdelivr/npm/hw/@huggingface/transformers"></a>
     <a href="https://github.com/huggingface/transformers.js/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/huggingface/transformers.js?color=blue"></a>
     <a href="https://huggingface.co/docs/transformers.js/index"><img alt="Documentation" src="https://img.shields.io/website/http/huggingface.co/docs/transformers.js/index.svg?down_color=red&down_message=offline&up_message=online"></a>
 </p>
@@ -39,15 +39,15 @@ For more information, check out the full [documentation](https://huggingface.co/
 ## Installation
 
 
-To install via [NPM](https://www.npmjs.com/package/sillytavern-transformers), run:
+To install via [NPM](https://www.npmjs.com/package/@huggingface/transformers), run:
 ```bash
-npm i sillytavern-transformers
+npm i @huggingface/transformers
 ```
 
 Alternatively, you can use it in vanilla JS, without any bundler, by using a CDN or static hosting. For example, using [ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), you can import the library with:
 ```html
 <script type="module">
-    import { pipeline } from 'https://cdn.jsdelivr.net/npm/sillytavern-transformers@4.0.0-next.7';
+    import { pipeline } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0-next.7';
 </script>
 ```
 
@@ -79,7 +79,7 @@ out = pipe('I love transformers!')
 <td>
 
 ```javascript
-import { pipeline } from 'sillytavern-transformers';
+import { pipeline } from '@huggingface/transformers';
 
 // Allocate a pipeline for sentiment-analysis
 const pipe = await pipeline('sentiment-analysis');
@@ -134,12 +134,12 @@ Ready to dive in? Explore our wide variety of demo applications and templates [h
 
 
 
-By default, Transformers.js uses [hosted pretrained models](https://huggingface.co/models?library=transformers.js) and [precompiled WASM binaries](https://cdn.jsdelivr.net/npm/sillytavern-transformers@4.0.0-next.7/dist/), which should work out-of-the-box. You can customize this as follows:
+By default, Transformers.js uses [hosted pretrained models](https://huggingface.co/models?library=transformers.js) and [precompiled WASM binaries](https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.0.0-next.7/dist/), which should work out-of-the-box. You can customize this as follows:
 
 ### Settings
 
 ```javascript
-import { env } from 'sillytavern-transformers';
+import { env } from '@huggingface/transformers';
 
 // Specify a custom location for models (defaults to '/models/').
 env.localModelPath = '/path/to/models/';

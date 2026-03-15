@@ -10,7 +10,7 @@ export class CLIPSegModel extends CLIPSegPreTrainedModel {}
  * **Example:** Perform zero-shot image segmentation with a `CLIPSegForImageSegmentation` model.
  *
  * ```javascript
- * import { AutoTokenizer, AutoProcessor, CLIPSegForImageSegmentation, RawImage } from 'sillytavern-transformers';
+ * import { AutoTokenizer, AutoProcessor, CLIPSegForImageSegmentation, RawImage } from '@huggingface/transformers';
  *
  * // Load tokenizer, processor, and model
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/clipseg-rd64-refined');

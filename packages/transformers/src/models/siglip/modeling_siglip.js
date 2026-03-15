@@ -9,7 +9,7 @@ export class SiglipPreTrainedModel extends PreTrainedModel {}
  * **Example:** Perform zero-shot image classification with a `SiglipModel`.
  *
  * ```javascript
- * import { AutoTokenizer, AutoProcessor, SiglipModel, RawImage } from 'sillytavern-transformers';
+ * import { AutoTokenizer, AutoProcessor, SiglipModel, RawImage } from '@huggingface/transformers';
  *
  * // Load tokenizer, processor, and model
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/siglip-base-patch16-224');
@@ -54,7 +54,7 @@ export class SiglipModel extends SiglipPreTrainedModel {}
  * **Example:** Compute text embeddings with `SiglipTextModel`.
  *
  * ```javascript
- * import { AutoTokenizer, SiglipTextModel } from 'sillytavern-transformers';
+ * import { AutoTokenizer, SiglipTextModel } from '@huggingface/transformers';
  *
  * // Load tokenizer and text model
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/siglip-base-patch16-224');
@@ -91,7 +91,7 @@ export class SiglipTextModel extends SiglipPreTrainedModel {
  * **Example:** Compute vision embeddings with `SiglipVisionModel`.
  *
  * ```javascript
- * import { AutoProcessor, SiglipVisionModel, RawImage } from 'sillytavern-transformers';
+ * import { AutoProcessor, SiglipVisionModel, RawImage } from '@huggingface/transformers';
  *
  * // Load processor and vision model
  * const processor = await AutoProcessor.from_pretrained('Xenova/siglip-base-patch16-224');

@@ -63,7 +63,7 @@ function isChat(x) {
  *
  * **Example:** Text generation with `HuggingFaceTB/SmolLM2-135M` (default settings).
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const generator = await pipeline('text-generation', 'onnx-community/SmolLM2-135M-ONNX');
  * const text = 'Once upon a time,';
@@ -73,7 +73,7 @@ function isChat(x) {
  *
  * **Example:** Chat completion with `onnx-community/Qwen3-0.6B-ONNX`.
  * ```javascript
- * import { pipeline, TextStreamer } from 'sillytavern-transformers';
+ * import { pipeline, TextStreamer } from '@huggingface/transformers';
  *
  * // Create a text generation pipeline
  * const generator = await pipeline(

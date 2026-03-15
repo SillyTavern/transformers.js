@@ -46,7 +46,7 @@ const SUBTASKS_MAPPING = {
  *
  * **Example:** Perform image segmentation with `Xenova/detr-resnet-50-panoptic`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const segmenter = await pipeline('image-segmentation', 'Xenova/detr-resnet-50-panoptic');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/cats.jpg';

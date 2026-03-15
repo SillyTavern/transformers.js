@@ -29,7 +29,7 @@ export class WavLMPreTrainedModel extends PreTrainedModel {}
  * **Example:** Load and run a `WavLMModel` for feature extraction.
  *
  * ```javascript
- * import { AutoProcessor, AutoModel, read_audio } from 'sillytavern-transformers';
+ * import { AutoProcessor, AutoModel, read_audio } from '@huggingface/transformers';
  *
  * // Read and preprocess audio
  * const processor = await AutoProcessor.from_pretrained('Xenova/wavlm-base');
@@ -84,7 +84,7 @@ export class WavLMForSequenceClassification extends WavLMPreTrainedModel {
  *
  * **Example:** Extract speaker embeddings with `WavLMForXVector`.
  * ```javascript
- * import { AutoProcessor, AutoModel, read_audio } from 'sillytavern-transformers';
+ * import { AutoProcessor, AutoModel, read_audio } from '@huggingface/transformers';
  *
  * // Read and preprocess audio
  * const processor = await AutoProcessor.from_pretrained('Xenova/wavlm-base-plus-sv');
@@ -127,7 +127,7 @@ export class WavLMForXVector extends WavLMPreTrainedModel {
  *
  * **Example:** Perform speaker diarization with `WavLMForAudioFrameClassification`.
  * ```javascript
- * import { AutoProcessor, AutoModelForAudioFrameClassification, read_audio } from 'sillytavern-transformers';
+ * import { AutoProcessor, AutoModelForAudioFrameClassification, read_audio } from '@huggingface/transformers';
  *
  * // Read and preprocess audio
  * const processor = await AutoProcessor.from_pretrained('Xenova/wavlm-base-plus-sd');

@@ -48,7 +48,7 @@ import { env } from '../env.js';
  *
  * **Example:** Generate audio from text with `onnx-community/Supertonic-TTS-ONNX`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const synthesizer = await pipeline('text-to-speech', 'onnx-community/Supertonic-TTS-ONNX');
  * const speaker_embeddings = 'https://huggingface.co/onnx-community/Supertonic-TTS-ONNX/resolve/main/voices/F1.bin';
@@ -64,7 +64,7 @@ import { env } from '../env.js';
  *
  * **Example:** Multilingual speech generation with `Xenova/mms-tts-fra`. See [here](https://huggingface.co/models?pipeline_tag=text-to-speech&other=vits&sort=trending) for the full list of available languages (1107).
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const synthesizer = await pipeline('text-to-speech', 'Xenova/mms-tts-fra');
  * const output = await synthesizer('Bonjour');

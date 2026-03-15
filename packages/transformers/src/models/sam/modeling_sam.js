@@ -28,7 +28,7 @@ export class SamPreTrainedModel extends PreTrainedModel {}
  *
  * **Example:** Perform mask generation w/ `Xenova/sam-vit-base`.
  * ```javascript
- * import { SamModel, AutoProcessor, RawImage } from 'sillytavern-transformers';
+ * import { SamModel, AutoProcessor, RawImage } from '@huggingface/transformers';
  *
  * const model = await SamModel.from_pretrained('Xenova/sam-vit-base');
  * const processor = await AutoProcessor.from_pretrained('Xenova/sam-vit-base');

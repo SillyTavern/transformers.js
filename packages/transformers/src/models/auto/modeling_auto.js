@@ -4,7 +4,7 @@
  * **Example:** Load and run an `AutoModel`.
  *
  * ```javascript
- * import { AutoModel, AutoTokenizer } from 'sillytavern-transformers';
+ * import { AutoModel, AutoTokenizer } from '@huggingface/transformers';
  *
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/bert-base-uncased');
  * const model = await AutoModel.from_pretrained('Xenova/bert-base-uncased');
@@ -23,7 +23,7 @@
  *
  * **Example:** Load and run an `AutoModelForSeq2SeqLM`.
  * ```javascript
- * import { AutoModelForSeq2SeqLM, AutoTokenizer } from 'sillytavern-transformers';
+ * import { AutoModelForSeq2SeqLM, AutoTokenizer } from '@huggingface/transformers';
  *
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/t5-small');
  * const model = await AutoModelForSeq2SeqLM.from_pretrained('Xenova/t5-small');

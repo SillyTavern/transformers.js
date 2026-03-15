@@ -17,7 +17,7 @@ export class SpeechT5Model extends SpeechT5PreTrainedModel {}
  *
  * **Example:** Generate speech from text with `SpeechT5ForSpeechToText`.
  * ```javascript
- * import { AutoTokenizer, AutoProcessor, SpeechT5ForTextToSpeech, SpeechT5HifiGan, Tensor } from 'sillytavern-transformers';
+ * import { AutoTokenizer, AutoProcessor, SpeechT5ForTextToSpeech, SpeechT5HifiGan, Tensor } from '@huggingface/transformers';
  *
  * // Load the tokenizer and processor
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/speecht5_tts');

@@ -3,19 +3,19 @@
  *
  * **Example:** Disable remote models.
  * ```javascript
- * import { env } from 'sillytavern-transformers';
+ * import { env } from '@huggingface/transformers';
  * env.allowRemoteModels = false;
  * ```
  *
  * **Example:** Set local model path.
  * ```javascript
- * import { env } from 'sillytavern-transformers';
+ * import { env } from '@huggingface/transformers';
  * env.localModelPath = '/path/to/local/models/';
  * ```
  *
  * **Example:** Set cache directory.
  * ```javascript
- * import { env } from 'sillytavern-transformers';
+ * import { env } from '@huggingface/transformers';
  * env.cacheDir = '/path/to/cache/directory/';
  * ```
  *
@@ -175,7 +175,7 @@ const DEFAULT_FETCH = typeof globalThis.fetch === 'function' ? globalThis.fetch.
  * Use these values to set `env.logLevel`.
  *
  * @example
- * import { env, LogLevel } from 'sillytavern-transformers';
+ * import { env, LogLevel } from '@huggingface/transformers';
  *
  * // Set log level to show only errors
  * env.logLevel = LogLevel.ERROR;

@@ -22,11 +22,11 @@ This tutorial will be written as an ES module, but you can easily adapt it to us
 
 ## Getting started
 
-Let's start by creating a new Node.js project and installing Transformers.js via [NPM](https://www.npmjs.com/package/sillytavern-transformers):
+Let's start by creating a new Node.js project and installing Transformers.js via [NPM](https://www.npmjs.com/package/@huggingface/transformers):
 
 ```bash
 npm init -y
-npm i sillytavern-transformers
+npm i @huggingface/transformers
 ```
 
 <Tip>
@@ -46,7 +46,7 @@ npm i wavefile
 Start by creating a new file called `index.js`, which will be the entry point for our application. Let's also import the necessary modules:
 
 ```js
-import { pipeline } from "sillytavern-transformers";
+import { pipeline } from "@huggingface/transformers";
 import wavefile from "wavefile";
 ```
 

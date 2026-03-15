@@ -207,7 +207,7 @@ Run your tests with:
 pnpm test
 
 # Only your model's tests
-pnpm --filter sillytavern-transformers test -t "MyModelForCausalLM"
+pnpm --filter @huggingface/transformers test -t "MyModelForCausalLM"
 ```
 
 
@@ -289,7 +289,7 @@ pnpm test
 
 Execute tests for a specific package
 ```bash
-pnpm --filter sillytavern-transformers test
+pnpm --filter @huggingface/transformers test
 ```
 
 Execute a specific test file

@@ -25,7 +25,7 @@ cd next-ai-chatbot
 Install the AI and Transformers.js dependencies:
 
 ```bash
-npm install ai @ai-sdk/react @browser-ai/transformers-js sillytavern-transformers zod
+npm install ai @ai-sdk/react @browser-ai/transformers-js @huggingface/transformers zod
 ```
 
 ## Step 2: Configure Next.js for browser inference

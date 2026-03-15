@@ -40,7 +40,7 @@ import { max, softmax } from '../utils/maths.js';
  *
  * **Example:** Perform named entity recognition with `Xenova/bert-base-NER`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const classifier = await pipeline('token-classification', 'Xenova/bert-base-NER');
  * const output = await classifier('My name is Sarah and I live in London');
@@ -52,7 +52,7 @@ import { max, softmax } from '../utils/maths.js';
  *
  * **Example:** Perform named entity recognition with `Xenova/bert-base-NER` (and return all labels).
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const classifier = await pipeline('token-classification', 'Xenova/bert-base-NER');
  * const output = await classifier('Sarah lives in the United States of America', { ignore_labels: [] });

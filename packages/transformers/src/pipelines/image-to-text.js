@@ -33,7 +33,7 @@ import { Tensor } from '../utils/tensor.js';
  *
  * **Example:** Generate a caption for an image w/ `Xenova/vit-gpt2-image-captioning`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const captioner = await pipeline('image-to-text', 'Xenova/vit-gpt2-image-captioning');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/cats.jpg';
@@ -43,7 +43,7 @@ import { Tensor } from '../utils/tensor.js';
  *
  * **Example:** Optical Character Recognition (OCR) w/ `Xenova/trocr-small-handwritten`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const captioner = await pipeline('image-to-text', 'Xenova/trocr-small-handwritten');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/handwriting.jpg';

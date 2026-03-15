@@ -51,7 +51,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example**: Perform zero-shot audio classification with `Xenova/clap-htsat-unfused`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const classifier = await pipeline('zero-shot-audio-classification', 'Xenova/clap-htsat-unfused');
  * const audio = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/dog_barking.wav';

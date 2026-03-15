@@ -40,7 +40,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Perform masked language modelling (a.k.a. "fill-mask") with `onnx-community/ettin-encoder-32m-ONNX`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const unmasker = await pipeline('fill-mask', 'onnx-community/ettin-encoder-32m-ONNX');
  * const output = await unmasker('The capital of France is [MASK].');
@@ -55,7 +55,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Perform masked language modelling (a.k.a. "fill-mask") with `Xenova/bert-base-uncased`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const unmasker = await pipeline('fill-mask', 'Xenova/bert-base-cased');
  * const output = await unmasker('The goal of life is [MASK].');
@@ -70,7 +70,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Perform masked language modelling (a.k.a. "fill-mask") with `Xenova/bert-base-cased` (and return top result).
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const unmasker = await pipeline('fill-mask', 'Xenova/bert-base-cased');
  * const output = await unmasker('The Milky Way is a [MASK] galaxy.', { top_k: 1 });

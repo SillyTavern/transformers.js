@@ -44,7 +44,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Zero shot image classification w/ `Xenova/clip-vit-base-patch32`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const classifier = await pipeline('zero-shot-image-classification', 'Xenova/clip-vit-base-patch32');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/tiger.jpg';

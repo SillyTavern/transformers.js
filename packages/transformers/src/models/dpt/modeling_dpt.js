@@ -12,7 +12,7 @@ export class DPTModel extends DPTPreTrainedModel {}
  *
  * **Example:** Depth estimation w/ `Xenova/dpt-hybrid-midas`.
  * ```javascript
- * import { DPTForDepthEstimation, AutoProcessor, RawImage, interpolate_4d } from 'sillytavern-transformers';
+ * import { DPTForDepthEstimation, AutoProcessor, RawImage, interpolate_4d } from '@huggingface/transformers';
  *
  * // Load model and processor
  * const model_id = 'Xenova/dpt-hybrid-midas';

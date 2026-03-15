@@ -26,7 +26,7 @@ import { Tensor } from '../utils/tensor.js';
  *
  * **Example:** Perform image feature extraction with `onnx-community/dinov3-vits16-pretrain-lvd1689m-ONNX`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const image_feature_extractor = await pipeline('image-feature-extraction', 'onnx-community/dinov3-vits16-pretrain-lvd1689m-ONNX');
  * const image = 'https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/cats.png';
@@ -41,7 +41,7 @@ import { Tensor } from '../utils/tensor.js';
  *
  * **Example:** Compute image embeddings with `Xenova/clip-vit-base-patch32`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const image_feature_extractor = await pipeline('image-feature-extraction', 'Xenova/clip-vit-base-patch32');
  * const image = 'https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/cats.png';

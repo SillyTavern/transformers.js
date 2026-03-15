@@ -13,7 +13,7 @@ export class Swin2SRModel extends Swin2SRPreTrainedModel {}
  * **Example:** Super-resolution w/ `Xenova/swin2SR-classical-sr-x2-64`.
  *
  * ```javascript
- * import { AutoProcessor, Swin2SRForImageSuperResolution, RawImage } from 'sillytavern-transformers';
+ * import { AutoProcessor, Swin2SRForImageSuperResolution, RawImage } from '@huggingface/transformers';
  *
  * // Load processor and model
  * const model_id = 'Xenova/swin2SR-classical-sr-x2-64';

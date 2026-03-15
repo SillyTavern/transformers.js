@@ -29,7 +29,7 @@ import { Tensor } from '../utils/tensor.js';
  *
  * **Example:** Answer questions about a document with `Xenova/donut-base-finetuned-docvqa`.
  * ```javascript
- * import { pipeline } from 'sillytavern-transformers';
+ * import { pipeline } from '@huggingface/transformers';
  *
  * const qa_pipeline = await pipeline('document-question-answering', 'Xenova/donut-base-finetuned-docvqa');
  * const image = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/invoice.png';

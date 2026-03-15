@@ -14,7 +14,7 @@ export class PyAnnoteModel extends PyAnnotePreTrainedModel {}
  * **Example:** Load and run a `PyAnnoteForAudioFrameClassification` for speaker diarization.
  *
  * ```javascript
- * import { AutoProcessor, AutoModelForAudioFrameClassification, read_audio } from 'sillytavern-transformers';
+ * import { AutoProcessor, AutoModelForAudioFrameClassification, read_audio } from '@huggingface/transformers';
  *
  * // Load model and processor
  * const model_id = 'onnx-community/pyannote-segmentation-3.0';

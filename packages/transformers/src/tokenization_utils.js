@@ -643,7 +643,7 @@ export class PreTrainedTokenizer extends Callable {
      * **Example:** Applying a chat template to a conversation.
      *
      * ```javascript
-     * import { AutoTokenizer } from "sillytavern-transformers";
+     * import { AutoTokenizer } from "@huggingface/transformers";
      *
      * const tokenizer = await AutoTokenizer.from_pretrained("Xenova/mistral-tokenizer-v1");
      *
