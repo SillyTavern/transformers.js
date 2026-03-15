@@ -11,7 +11,7 @@ export class HubertPreTrainedModel extends PreTrainedModel {}
  * **Example:** Load and run a `HubertModel` for feature extraction.
  *
  * ```javascript
- * import { AutoProcessor, AutoModel, read_audio } from '@huggingface/transformers';
+ * import { AutoProcessor, AutoModel, read_audio } from 'sillytavern-transformers';
  *
  * // Read and preprocess audio
  * const processor = await AutoProcessor.from_pretrained('Xenova/hubert-base-ls960');

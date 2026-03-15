@@ -46,7 +46,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Sentiment-analysis w/ `Xenova/distilbert-base-uncased-finetuned-sst-2-english`.
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const classifier = await pipeline('sentiment-analysis', 'Xenova/distilbert-base-uncased-finetuned-sst-2-english');
  * const output = await classifier('I love transformers!');
@@ -55,7 +55,7 @@ import { softmax } from '../utils/maths.js';
  *
  * **Example:** Multilingual sentiment-analysis w/ `Xenova/bert-base-multilingual-uncased-sentiment` (and return top 5 classes).
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const classifier = await pipeline('sentiment-analysis', 'Xenova/bert-base-multilingual-uncased-sentiment');
  * const output = await classifier('Le meilleur film de tous les temps.', { top_k: 5 });

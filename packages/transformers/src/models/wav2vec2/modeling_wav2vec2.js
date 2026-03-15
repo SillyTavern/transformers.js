@@ -10,7 +10,7 @@ export class Wav2Vec2PreTrainedModel extends PreTrainedModel {}
  * **Example:** Load and run a `Wav2Vec2Model` for feature extraction.
  *
  * ```javascript
- * import { AutoProcessor, AutoModel, read_audio } from '@huggingface/transformers';
+ * import { AutoProcessor, AutoModel, read_audio } from 'sillytavern-transformers';
  *
  * // Read and preprocess audio
  * const processor = await AutoProcessor.from_pretrained('Xenova/mms-300m');

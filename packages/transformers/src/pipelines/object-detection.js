@@ -39,7 +39,7 @@ import { Pipeline, prepareImages, get_bounding_box } from './_base.js';
  *
  * **Example:** Run object-detection with `Xenova/detr-resnet-50`.
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const detector = await pipeline('object-detection', 'Xenova/detr-resnet-50');
  * const img = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/cats.jpg';

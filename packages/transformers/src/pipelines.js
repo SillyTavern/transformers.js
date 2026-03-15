@@ -3,7 +3,7 @@
  *
  * **Example:** Instantiate pipeline using the `pipeline` function.
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const classifier = await pipeline('sentiment-analysis');
  * const output = await classifier('I love transformers!');

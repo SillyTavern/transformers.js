@@ -49,7 +49,7 @@ import { logger } from '../utils/logger.js';
  *
  * **Example:** Zero shot classification with `Xenova/mobilebert-uncased-mnli`.
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const classifier = await pipeline('zero-shot-classification', 'Xenova/mobilebert-uncased-mnli');
  * const text = 'Last week I upgraded my iOS version and ever since then my phone has been overheating whenever I use your app.';
@@ -64,7 +64,7 @@ import { logger } from '../utils/logger.js';
  *
  * **Example:** Zero shot classification with `Xenova/nli-deberta-v3-xsmall` (multi-label).
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const classifier = await pipeline('zero-shot-classification', 'Xenova/nli-deberta-v3-xsmall');
  * const text = 'I have a problem with my iphone that needs to be resolved asap!';

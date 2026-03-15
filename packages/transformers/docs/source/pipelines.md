@@ -13,7 +13,7 @@ For the full list of available tasks/pipelines, check out [this table](#availabl
 Start by creating an instance of `pipeline()` and specifying a task you want to use it for. For example, to create a sentiment analysis pipeline, you can do:
 
 ```javascript
-import { pipeline } from "@huggingface/transformers";
+import { pipeline } from "sillytavern-transformers";
 
 const classifier = await pipeline("sentiment-analysis");
 ```
@@ -179,7 +179,7 @@ It adds depth and richness without being overpowering its taste buds alone
 Some pipelines such as `text-generation` or `automatic-speech-recognition` support streaming output. This is achieved using the `TextStreamer` class. For example, when using a chat model like `Qwen2.5-Coder-0.5B-Instruct`, you can specify a callback function that will be called with each generated token text (if unset, new tokens will be printed to the console).
 
 ```js
-import { pipeline, TextStreamer } from "@huggingface/transformers";
+import { pipeline, TextStreamer } from "sillytavern-transformers";
 
 // Create a text generation pipeline
 const generator = await pipeline(

@@ -42,10 +42,10 @@ You can stop the development server by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> i
 
 ## Step 2: Install and configure Transformers.js
 
-Now we get to the fun part: adding machine learning to our application! First, install Transformers.js from [NPM](https://www.npmjs.com/package/@huggingface/transformers) with the following command:
+Now we get to the fun part: adding machine learning to our application! First, install Transformers.js from [NPM](https://www.npmjs.com/package/sillytavern-transformers) with the following command:
 
 ```bash
-npm install @huggingface/transformers
+npm install sillytavern-transformers
 ```
 
 For this application, we will use the [Xenova/nllb-200-distilled-600M](https://huggingface.co/Xenova/nllb-200-distilled-600M) model, which can perform multilingual translation among 200 languages. Before we start, there are 2 things we need to take note of:
@@ -58,7 +58,7 @@ We can achieve both of these goals by using a [Web Worker](https://developer.moz
 1. Create a file called `worker.js` in the `src` directory. This script will do all the heavy-lifting for us, including loading and running of the translation pipeline. To ensure the model is only loaded once, we will create the `MyTranslationPipeline` class which use the [singleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern) to lazily create a single instance of the pipeline when `getInstance` is first called, and use this pipeline for all subsequent calls:
 
    ```javascript
-   import { pipeline, TextStreamer } from "@huggingface/transformers";
+   import { pipeline, TextStreamer } from "sillytavern-transformers";
 
    class MyTranslationPipeline {
      static task = "translation";

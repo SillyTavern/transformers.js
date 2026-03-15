@@ -23,7 +23,7 @@ import { Text2TextGenerationPipeline } from './text2text-generation.js';
  *
  * **Example:** Summarization w/ `Xenova/distilbart-cnn-6-6`.
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const summarizer = await pipeline('summarization', 'Xenova/distilbart-cnn-6-6');
  * const text = 'The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, ' +

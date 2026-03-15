@@ -32,7 +32,7 @@ import { RawImage } from '../utils/image.js';
  *
  * **Example:** Perform background removal with `Xenova/modnet`.
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const segmenter = await pipeline('background-removal', 'Xenova/modnet');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/portrait-of-woman_small.jpg';

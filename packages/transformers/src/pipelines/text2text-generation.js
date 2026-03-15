@@ -25,7 +25,7 @@ import { Tensor } from '../utils/tensor.js';
  *
  * **Example:** Text-to-text generation w/ `Xenova/LaMini-Flan-T5-783M`.
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const generator = await pipeline('text2text-generation', 'Xenova/LaMini-Flan-T5-783M');
  * const output = await generator('how can I become more healthy?', {

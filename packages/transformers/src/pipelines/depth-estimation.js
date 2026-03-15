@@ -32,7 +32,7 @@ import { interpolate_4d } from '../utils/tensor.js';
  *
  * **Example:** Depth estimation w/ `onnx-community/depth-anything-v2-small`
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const depth_estimator = await pipeline('depth-estimation', 'onnx-community/depth-anything-v2-small');
  * const image = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/cats.jpg';

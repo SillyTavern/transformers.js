@@ -9,7 +9,7 @@
  *
  * This module is not directly exported, but can be accessed through the environment variables:
  * ```javascript
- * import { env } from '@huggingface/transformers';
+ * import { env } from 'sillytavern-transformers';
  * console.log(env.backends.onnx);
  * ```
  *

@@ -39,10 +39,10 @@ On installation, you'll see various prompts. For this demo, we'll be selecting t
 
 ### Step 2: Install and configure Transformers.js
 
-You can install Transformers.js from [NPM](https://www.npmjs.com/package/@huggingface/transformers) with the following command:
+You can install Transformers.js from [NPM](https://www.npmjs.com/package/sillytavern-transformers) with the following command:
 
 ```bash
-npm i @huggingface/transformers
+npm i sillytavern-transformers
 ```
 
 We also need to update the `next.config.js` file to ignore node-specific modules when bundling for the browser:
@@ -72,7 +72,7 @@ module.exports = nextConfig;
 Next, we'll create a new [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) script where we'll place all ML-related code. This is to ensure that the main thread is not blocked while the model is loading and performing inference. For this application, we'll be using [`Xenova/distilbert-base-uncased-finetuned-sst-2-english`](https://huggingface.co/Xenova/distilbert-base-uncased-finetuned-sst-2-english), a ~67M parameter model finetuned on the [Stanford Sentiment Treebank](https://huggingface.co/datasets/sst) dataset. Add the following code to `./src/app/worker.js`:
 
 ```js
-import { pipeline, env } from "@huggingface/transformers";
+import { pipeline, env } from "sillytavern-transformers";
 
 // Skip local model check
 env.allowLocalModels = false;
@@ -257,10 +257,10 @@ On installation, you'll see various prompts. For this demo, we'll be selecting t
 
 ### Step 2: Install and configure Transformers.js
 
-You can install Transformers.js from [NPM](https://www.npmjs.com/package/@huggingface/transformers) with the following command:
+You can install Transformers.js from [NPM](https://www.npmjs.com/package/sillytavern-transformers) with the following command:
 
 ```bash
-npm i @huggingface/transformers
+npm i sillytavern-transformers
 ```
 
 We also need to update the `next.config.js` file to prevent Webpack from bundling certain packages:
@@ -286,7 +286,7 @@ Next, let's set up our Route Handler. We can do this by creating two files in a 
 1. `pipeline.js` - to handle the construction of our pipeline.
 
    ```js
-   import { pipeline } from "@huggingface/transformers";
+   import { pipeline } from "sillytavern-transformers";
 
    // Use the Singleton pattern to enable lazy construction of the pipeline.
    // NOTE: We wrap the class in a function to prevent code duplication (see below).

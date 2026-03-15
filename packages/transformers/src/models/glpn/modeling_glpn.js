@@ -8,7 +8,7 @@ export class GLPNPreTrainedModel extends PreTrainedModel {}
 export class GLPNModel extends GLPNPreTrainedModel {}
 
 /**
- * import { GLPNForDepthEstimation, AutoProcessor, RawImage, interpolate_4d } from '@huggingface/transformers';
+ * import { GLPNForDepthEstimation, AutoProcessor, RawImage, interpolate_4d } from 'sillytavern-transformers';
  *
  * // Load model and processor
  * const model_id = 'Xenova/glpn-kitti';

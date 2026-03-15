@@ -26,7 +26,7 @@ import { RawImage } from '../utils/image.js';
  *
  * **Example:** Super-resolution w/ `Xenova/swin2SR-classical-sr-x2-64`
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const upscaler = await pipeline('image-to-image', 'Xenova/swin2SR-classical-sr-x2-64');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/butterfly.jpg';

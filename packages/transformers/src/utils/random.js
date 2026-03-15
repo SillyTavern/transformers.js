@@ -4,7 +4,7 @@
  * This file implements Mersenne Twister 19937, matching Python's `random` module exactly for reproducibility.
  *
  * ```javascript
- * import { random } from '@huggingface/transformers';
+ * import { random } from 'sillytavern-transformers';
  *
  * random.seed(42);
  * random.random();           // 0.6394267984578837  (matches Python)

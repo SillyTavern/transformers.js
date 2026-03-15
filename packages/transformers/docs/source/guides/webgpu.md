@@ -18,7 +18,7 @@ Thanks to our collaboration with [ONNX Runtime Web](https://www.npmjs.com/packag
 **Example:** Compute text embeddings on WebGPU ([demo](https://v2.scrimba.com/s06a2smeej))
 
 ```js
-import { pipeline } from "@huggingface/transformers";
+import { pipeline } from "sillytavern-transformers";
 
 // Create a feature-extraction pipeline
 const extractor = await pipeline(
@@ -40,7 +40,7 @@ console.log(embeddings.tolist());
 **Example:** Perform automatic speech recognition with OpenAI whisper on WebGPU ([demo](https://v2.scrimba.com/s0oi76h82g))
 
 ```js
-import { pipeline } from "@huggingface/transformers";
+import { pipeline } from "sillytavern-transformers";
 
 // Create automatic speech recognition pipeline
 const transcriber = await pipeline(
@@ -60,7 +60,7 @@ console.log(output);
 **Example:** Perform image classification with MobileNetV4 on WebGPU ([demo](https://v2.scrimba.com/s0fv2uab1t))
 
 ```js
-import { pipeline } from "@huggingface/transformers";
+import { pipeline } from "sillytavern-transformers";
 
 // Create image classification pipeline
 const classifier = await pipeline(

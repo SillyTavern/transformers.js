@@ -10,7 +10,7 @@ export class ClapModel extends ClapPreTrainedModel {}
  * **Example:** Compute text embeddings with `ClapTextModelWithProjection`.
  *
  * ```javascript
- * import { AutoTokenizer, ClapTextModelWithProjection } from '@huggingface/transformers';
+ * import { AutoTokenizer, ClapTextModelWithProjection } from 'sillytavern-transformers';
  *
  * // Load tokenizer and text model
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/clap-htsat-unfused');
@@ -47,7 +47,7 @@ export class ClapTextModelWithProjection extends ClapPreTrainedModel {
  * **Example:** Compute audio embeddings with `ClapAudioModelWithProjection`.
  *
  * ```javascript
- * import { AutoProcessor, ClapAudioModelWithProjection, read_audio } from '@huggingface/transformers';
+ * import { AutoProcessor, ClapAudioModelWithProjection, read_audio } from 'sillytavern-transformers';
  *
  * // Load processor and audio model
  * const processor = await AutoProcessor.from_pretrained('Xenova/clap-htsat-unfused');

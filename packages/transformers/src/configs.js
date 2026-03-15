@@ -5,7 +5,7 @@
  * **Example:** Load an `AutoConfig`.
  *
  * ```javascript
- * import { AutoConfig } from '@huggingface/transformers';
+ * import { AutoConfig } from 'sillytavern-transformers';
  * const config = await AutoConfig.from_pretrained('bert-base-uncased');
  * console.log(config);
  * // PretrainedConfig {

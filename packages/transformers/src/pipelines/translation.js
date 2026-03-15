@@ -27,7 +27,7 @@ import { Text2TextGenerationPipeline } from './text2text-generation.js';
  * for the full list of languages and their corresponding codes.
  *
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const translator = await pipeline('translation', 'Xenova/nllb-200-distilled-600M');
  * const output = await translator('जीवन एक चॉकलेट बॉक्स की तरह है।', {
@@ -43,7 +43,7 @@ import { Text2TextGenerationPipeline } from './text2text-generation.js';
  * for the full list of languages and their corresponding codes.
  *
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const translator = await pipeline('translation', 'Xenova/m2m100_418M');
  * const output = await translator('生活就像一盒巧克力。', {
@@ -59,7 +59,7 @@ import { Text2TextGenerationPipeline } from './text2text-generation.js';
  * for the full list of languages and their corresponding codes.
  *
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const translator = await pipeline('translation', 'Xenova/mbart-large-50-many-to-many-mmt');
  * const output = await translator('संयुक्त राष्ट्र के प्रमुख का कहना है कि सीरिया में कोई सैन्य समाधान नहीं है', {

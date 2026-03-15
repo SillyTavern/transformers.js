@@ -8,7 +8,7 @@ export class VitMattePreTrainedModel extends PreTrainedModel {}
  *
  * **Example:** Perform image matting with a `VitMatteForImageMatting` model.
  * ```javascript
- * import { AutoProcessor, VitMatteForImageMatting, RawImage } from '@huggingface/transformers';
+ * import { AutoProcessor, VitMatteForImageMatting, RawImage } from 'sillytavern-transformers';
  *
  * // Load processor and model
  * const processor = await AutoProcessor.from_pretrained('Xenova/vitmatte-small-distinctions-646');
@@ -33,7 +33,7 @@ export class VitMattePreTrainedModel extends PreTrainedModel {}
  *
  * You can visualize the alpha matte as follows:
  * ```javascript
- * import { Tensor, cat } from '@huggingface/transformers';
+ * import { Tensor, cat } from 'sillytavern-transformers';
  *
  * // Visualize predicted alpha matte
  * const imageTensor = image.toTensor();

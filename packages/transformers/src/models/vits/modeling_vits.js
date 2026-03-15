@@ -29,7 +29,7 @@ export class VitsPreTrainedModel extends PreTrainedModel {}
  *
  * **Example:** Generate speech from text with `VitsModel`.
  * ```javascript
- * import { AutoTokenizer, VitsModel } from '@huggingface/transformers';
+ * import { AutoTokenizer, VitsModel } from 'sillytavern-transformers';
  *
  * // Load the tokenizer and model
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/mms-tts-eng');

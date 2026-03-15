@@ -45,7 +45,7 @@ import { Pipeline, prepareImages, get_bounding_box } from './_base.js';
  *
  * **Example:** Zero-shot object detection w/ `Xenova/owlvit-base-patch32`.
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const detector = await pipeline('zero-shot-object-detection', 'Xenova/owlvit-base-patch32');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/astronaut.png';
@@ -77,7 +77,7 @@ import { Pipeline, prepareImages, get_bounding_box } from './_base.js';
  *
  * **Example:** Zero-shot object detection w/ `Xenova/owlvit-base-patch32` (returning top 4 matches and setting a threshold).
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const detector = await pipeline('zero-shot-object-detection', 'Xenova/owlvit-base-patch32');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/beach.png';

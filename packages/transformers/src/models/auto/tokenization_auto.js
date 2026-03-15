@@ -10,7 +10,7 @@ import { logger } from '../../utils/logger.js';
  * This will automatically detect the tokenizer type based on the tokenizer class defined in `tokenizer_config.json`.
  *
  * ```javascript
- * import { AutoTokenizer } from '@huggingface/transformers';
+ * import { AutoTokenizer } from 'sillytavern-transformers';
  *
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/bert-base-uncased');
  * const { input_ids } = await tokenizer('I love transformers!');

@@ -28,7 +28,7 @@ import { Tensor, mean_pooling, quantize_embeddings } from '../utils/tensor.js';
  *
  * **Example:** Run feature extraction using `onnx-community/all-MiniLM-L6-v2-ONNX` (without pooling or normalization).
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const extractor = await pipeline('feature-extraction', 'onnx-community/all-MiniLM-L6-v2-ONNX');
  * const output = await extractor('This is a simple test.');
@@ -44,7 +44,7 @@ import { Tensor, mean_pooling, quantize_embeddings } from '../utils/tensor.js';
  *
  * **Example:** Run feature extraction using `onnx-community/all-MiniLM-L6-v2-ONNX` (with pooling and normalization).
  * ```javascript
- * import { pipeline } from '@huggingface/transformers';
+ * import { pipeline } from 'sillytavern-transformers';
  *
  * const extractor = await pipeline('feature-extraction', 'onnx-community/all-MiniLM-L6-v2-ONNX');
  * const output = await extractor('This is a simple test.', { pooling: 'mean', normalize: true });

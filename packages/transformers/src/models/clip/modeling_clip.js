@@ -8,7 +8,7 @@ export class CLIPPreTrainedModel extends PreTrainedModel {}
  * **Example:** Perform zero-shot image classification with a `CLIPModel`.
  *
  * ```javascript
- * import { AutoTokenizer, AutoProcessor, CLIPModel, RawImage } from '@huggingface/transformers';
+ * import { AutoTokenizer, AutoProcessor, CLIPModel, RawImage } from 'sillytavern-transformers';
  *
  * // Load tokenizer, processor, and model
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/clip-vit-base-patch16');
@@ -67,7 +67,7 @@ export class CLIPTextModel extends CLIPPreTrainedModel {
  * **Example:** Compute text embeddings with `CLIPTextModelWithProjection`.
  *
  * ```javascript
- * import { AutoTokenizer, CLIPTextModelWithProjection } from '@huggingface/transformers';
+ * import { AutoTokenizer, CLIPTextModelWithProjection } from 'sillytavern-transformers';
  *
  * // Load tokenizer and text model
  * const tokenizer = await AutoTokenizer.from_pretrained('Xenova/clip-vit-base-patch16');
@@ -118,7 +118,7 @@ export class CLIPVisionModel extends CLIPPreTrainedModel {
  * **Example:** Compute vision embeddings with `CLIPVisionModelWithProjection`.
  *
  * ```javascript
- * import { AutoProcessor, CLIPVisionModelWithProjection, RawImage } from '@huggingface/transformers';
+ * import { AutoProcessor, CLIPVisionModelWithProjection, RawImage } from 'sillytavern-transformers';
  *
  * // Load processor and vision model
  * const processor = await AutoProcessor.from_pretrained('Xenova/clip-vit-base-patch16');
