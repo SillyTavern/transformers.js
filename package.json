@@ -1,5 +1,5 @@
 {
-  "name": "@huggingface/transformers-monorepo",
+  "name": "sillytavern-transformers-monorepo",
   "version": "0.0.1",
   "private": true,
   "description": "Monorepo for Hugging Face Transformers.js and framework integrations",
