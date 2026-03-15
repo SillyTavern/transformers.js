@@ -412,13 +412,13 @@ export class RawImage {
                         bilinear: ResizeStrategy.BILINEAR,
                         bicubic: ResizeStrategy.BICUBIC,
                     };
-                    img = img.resize({ w: width, h: height, mode: modeMap[resampleMethod] });
+                    img.resize({ w: width, h: height, mode: modeMap[resampleMethod] });
                     break;
                 }
 
                 case 'lanczos':
                     // Jimp does not support Lanczos; use bicubic as the closest alternative
-                    img = img.resize({ w: width, h: height, mode: ResizeStrategy.BICUBIC });
+                    img.resize({ w: width, h: height, mode: ResizeStrategy.BICUBIC });
                     break;
 
                 default:
@@ -579,7 +579,7 @@ export class RawImage {
 
             if (width_offset >= 0 && height_offset >= 0) {
                 // Cropped image lies entirely within the original image
-                img = img.crop({
+                img.crop({
                     x: Math.floor(width_offset),
                     y: Math.floor(height_offset),
                     w: crop_width,
@@ -619,7 +619,7 @@ export class RawImage {
                 const extHeight = this.height + y_padding[0] + y_padding[1];
                 const padded = new Jimp({ width: extWidth, height: extHeight, color: 0x00000000 });
                 padded.composite(img, x_padding[0], y_padding[0]);
-                img = padded.crop({
+                padded.crop({
                     x: x_extract,
                     y: y_extract,
                     w: crop_width,
@@ -770,6 +770,7 @@ export class RawImage {
             return saveBlob(path, blob);
         } else if (apis.IS_FS_AVAILABLE) {
             const img = this.toJimp();
+            // @ts-expect-error
             await img.write(path);
         } else {
             throw new Error('Unable to save the image because filesystem is disabled in this environment.');
